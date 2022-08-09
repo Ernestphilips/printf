@@ -1,0 +1,171 @@
+.TH man 1 "23 November 2016" "_printf man page"
+
+.SH NAME
+
+.B _printf
+
+- format and print data
+
+.SH SYNOPSIS
+
+.B _printf
+
+.I FORMAT
+
+[
+
+.I ARGUMENT
+
+]...
+
+
+
+.B printf
+
+.I OPTION
+
+.SH DESCRIPTION
+
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
+
+
+
+      --help display this help and exit
+
+
+
+      --version
+
+      output version information and exit
+
+
+
+The function _printf() produces output according to a
+
+.I format
+
+as described below. The function
+
+.B_printf()
+
+writes output to
+
+.I stdout
+
+, the standard output stream.
+
+.LP
+
+.B Return Value
+
+Upon successful return, this function returns the number of characters printed.
+
+.LP
+
+.B Format of the format string
+
+This is the string that contains the text to be written to stdout. It can optionally contain embedded format tags that are replaced by the values specified in subsequent additional arguments and formatted as requested.
+
+Format tags prototype is
+
+.B %[flags][width][.precision][length]
+
+specifier.
+
+.LP
+
+.B The format specifier for _printf are:
+
+.LP
+
+.B %c
+
+.LP
+
+If no
+
+.B l
+
+modifier is present, the
+
+.I int
+
+argument is converted to an
+
+.I unsigned char
+
+, and the resulting character is written.
+
+.LP
+
+.B %s
+
+.LP
+
+The argument must be a pointer to an array of character type (pointer to a string). Characters from the array are written up to its last character (null byte ('\\0') not included).
+
+.LP
+
+.B %%
+
+.LP
+
+A '%' is written by adding two percentage signs
+
+.B (%%).
+
+.LP
+
+.B %d, %i
+
+.LP
+
+The
+
+.I int
+
+specifier prints integer and decimal values.
+
+.LP
+
+.B %o
+
+.LP
+
+The %o format specifier takes on an int unsigned octal value.
+
+.LP
+
+.B %u
+
+.LP
+
+The %u format specifier takes on an int unsigned decimal
+
+.LP
+
+.B %x, %X
+
+.LP
+
+The %x & %X format specifier takes int unsigned hex value
+
+.LP
+
+.SH OPTIONS
+
+.B _printf
+
+- update to _printf(3.1.5) for options.
+
+.SH SEE ALSO
+
+.I printf
+
+.SH BUGS
+
+No known bugs.
+
+.SH AUTHOR
+
+Victor Arellano, Colton Walker
