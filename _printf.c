@@ -2,6 +2,8 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+void print_buffer(char buffer[], int *buff_ind);
+
 /**
  * _printf - printf function
  * @format: format
